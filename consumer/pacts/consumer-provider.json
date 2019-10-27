@@ -1,0 +1,37 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "messages": [
+    {
+      "description": "a-valid-event",
+      "providerStates": [
+
+      ],
+      "contents": {
+        "id": 1
+      },
+      "matchingRules": {
+        "body": {
+          "$.id": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metaData": {
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}
