@@ -8,7 +8,7 @@ const validEvent = { id: 1 };
 const messageProvider = { validEvent: () => Promise.resolve(validEvent) };
 
 describe("Provider", () => {
-  it("publishes a valid event succesfully", async () => {
+  it("publishes a valid event successfully", async () => {
     const provider = new MessageProviderPact({
       messageProviders: { "a-valid-event": () => messageProvider.validEvent() },
       provider: PROVIDER,

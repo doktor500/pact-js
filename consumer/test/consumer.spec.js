@@ -16,7 +16,7 @@ const eventHandler = (event) => {
 };
 
 describe("Consumer", () => {
-  it("handles a valid event succesfully", async () => {
+  it("handles a valid event successfully", async () => {
     const messageConsumer = new MessageConsumerPact({
       consumer: CONSUMER,
       dir: PACT_DIR,
