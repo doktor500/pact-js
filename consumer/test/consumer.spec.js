@@ -4,9 +4,9 @@ import * as path from "path";
 
 const CONSUMER = "Consumer";
 const CONSUMER_VERSION = "1.0.0";
-const PROVIDER = "Provider"
-const PROVIDER_VERSION = "1.0.0"
-const PACT_BROKER_URL = "http://localhost:9292";
+const PROVIDER = "Provider";
+const PROVIDER_VERSION = "1.0.0";
+const PACT_BROKER_URL = "http://localhost:8000";
 const PACT_DIR = path.resolve(process.cwd(), "pacts");
 
 const eventHandler = (event) => {
