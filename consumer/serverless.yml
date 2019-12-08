@@ -1,0 +1,18 @@
+service:
+  name: customer-email-sender
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: main
+  timeout: 10
+  region: ${env:AWS_REGION}
+
+functions:
+  customer-email-sender:
+    name: customer-email-sender
+    description: Sends email to the customer when an order is placed
+    handler: src/sendEmail.onOrderPlaced

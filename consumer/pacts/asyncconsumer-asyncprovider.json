@@ -1,22 +1,24 @@
 {
   "consumer": {
-    "name": "Consumer"
+    "name": "AsyncConsumer"
   },
   "provider": {
-    "name": "Provider"
+    "name": "AsyncProvider"
   },
   "messages": [
     {
-      "description": "a-valid-event",
+      "description": "orderPlaced",
       "providerStates": [
 
       ],
       "contents": {
-        "id": 1
+        "detail": {
+          "order_number": "QUC4449"
+        }
       },
       "matchingRules": {
         "body": {
-          "$.id": {
+          "$.detail.order_number": {
             "matchers": [
               {
                 "match": "type"

@@ -10,17 +10,36 @@
   "devDependencies": {
     "@pact-foundation/pact": "^9.2.1",
     "@pact-foundation/pact-node": "^10.2.2",
-    "@types/jest": "^24.0.23",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "serverless": "^1.59.2",
+    "serverless-offline": "^5.12.1",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4"
   },
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "transform-es2015-modules-commonjs"
-        ]
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
       }
-    }
+    },
+    "roots": [
+      "<rootDir>"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "\\.spec\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.23",
+    "aws-lambda": "latest"
   }
 }
